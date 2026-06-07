@@ -48,7 +48,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("tradecraft_user");
+    localStorage.removeItem("emergingtrader80_user");
   };
 
   const subscribe = async () => {
@@ -68,7 +68,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
     if (user) {
       const updatedUser = { ...user, hasSubscription: false };
       setUser(updatedUser);
-      localStorage.setItem("tradecraft_user", JSON.stringify(updatedUser));
+      localStorage.setItem("emergingtrader80_user", JSON.stringify(updatedUser));
     }
   };
 
