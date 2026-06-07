@@ -1,12 +1,7 @@
 {
   "$schema": "https://vercel.com/static/schema/v2.json",
   "version": 2,
-  "builds": [
-    {
-      "src": "next.config.ts",
-      "use": "@vercel/next"
-    }
-  ],
+  "src": "package.json",
   "rewrites": [],
   "redirects": [],
   "routes": [],
