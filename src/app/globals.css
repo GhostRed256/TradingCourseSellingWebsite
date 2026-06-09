@@ -166,3 +166,40 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* ── Cyan Hover Glow & Animation ── */
+
+.glass-card {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.25s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.35),
+    0 8px 40px rgba(34, 211, 238, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  border-color: rgba(34, 211, 238, 0.3) !important;
+}
+
+a {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: #22d3ee;
+  text-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
+}
+
+@keyframes cyan-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px rgba(34, 211, 238, 0.3);
+  }
+}
