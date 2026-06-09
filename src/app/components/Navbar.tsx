@@ -11,7 +11,8 @@ export default function Navbar() {
 
   // Mock Market Tickers
   const [tickers, setTickers] = useState([
-    { symbol: "BTCUSD", price: "72,410.50", change: "+2.45%", isUp: true },
+    { symbol: "XAU/USD", price: "2,342.10", change: "-0.50%", isUp: false },
+    { symbol: "XAG/USD", price: "28.45", change: "+1.20%", isUp: true },
     { symbol: "ETHUSD", price: "3,820.20", change: "-0.85%", isUp: false },
     { symbol: "AAPL", price: "189.43", change: "+1.12%", isUp: true },
     { symbol: "SPY", price: "528.30", change: "+0.42%", isUp: true },
@@ -25,7 +26,7 @@ export default function Navbar() {
           const currentPrice = parseFloat(ticker.price.replace(/,/g, ""));
           const changePercent = (Math.random() * 0.2 - 0.1); // -0.1% to +0.1%
           const nextPrice = currentPrice * (1 + changePercent / 100);
-          
+
           return {
             ...ticker,
             price: nextPrice.toLocaleString(undefined, {
@@ -61,9 +62,8 @@ export default function Navbar() {
               <span className="font-semibold text-gray-300">{ticker.symbol}</span>
               <span className="font-mono text-white">{ticker.price}</span>
               <span
-                className={`flex items-center font-mono font-medium ${
-                  ticker.isUp ? "text-emerald-400" : "text-rose-400"
-                }`}
+                className={`flex items-center font-mono font-medium ${ticker.isUp ? "text-emerald-400" : "text-rose-400"
+                  }`}
               >
                 {ticker.isUp ? (
                   <ArrowUpRight className="h-3 w-3" />
@@ -76,9 +76,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center md:hidden">
-            <span className="font-semibold text-lg bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              emergingtrader80
-            </span>
+          <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+            emergingtrader80
+          </span>
         </div>
 
         {/* Right Side: Alerts & Subscription Actions */}
@@ -123,8 +123,8 @@ export default function Navbar() {
                 <div className="hidden flex-col text-left md:flex">
                   <span className="text-xs font-semibold text-white">{user.username}</span>
                   <div className="text-[10px] font-mono text-gray-500">
-                  emergingtrader80_terminal.exe
-                </div>
+                    emergingtrader80_terminal.exe
+                  </div>
                 </div>
               </div>
             </>
@@ -145,7 +145,7 @@ export default function Navbar() {
           <div className="w-full max-w-md overflow-hidden glass-card p-6 border border-white/10 relative">
             {/* Ambient background glow inside modal */}
             <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl"></div>
-            
+
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
               Why Choose emergingtrader80?
             </h2>

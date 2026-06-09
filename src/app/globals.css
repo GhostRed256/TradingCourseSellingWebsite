@@ -6,12 +6,12 @@
   --card-bg: rgba(255, 255, 255, 0.03);
   --card-border: rgba(255, 255, 255, 0.07);
   --glass-blur: 16px;
-  
+
   --bullish: #00e676;
   --bearish: #ff1744;
-  --accent: #2979ff;
-  --accent-glow: rgba(41, 121, 255, 0.35);
-  
+  --accent: #22d3ee;
+  --accent-glow: rgba(34, 211, 238, 0.35);
+
   --font-geist-sans: "Geist Sans", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }
@@ -69,14 +69,14 @@ body {
 }
 
 @utility neon-btn-blue {
-  background: linear-gradient(135deg, #2979ff, #1565c0);
-  box-shadow: 0 4px 20px rgba(41, 121, 255, 0.3);
+  background: linear-gradient(135deg, #22d3ee, #0891b2);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .neon-btn-blue:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(41, 121, 255, 0.5);
+  box-shadow: 0 8px 25px rgba(34, 211, 238, 0.5);
 }
 
 @utility neon-text-bullish {
@@ -110,7 +110,7 @@ body {
 .blob-1 {
   width: 500px;
   height: 500px;
-  background: #3b82f6;
+  background: #22d3ee;
   top: -10%;
   left: -10%;
   animation-duration: 20s;
@@ -119,7 +119,7 @@ body {
 .blob-2 {
   width: 600px;
   height: 600px;
-  background: #a855f7;
+  background: #0891b2;
   bottom: -15%;
   right: -10%;
   animation-duration: 30s;
@@ -128,7 +128,7 @@ body {
 .blob-3 {
   width: 400px;
   height: 400px;
-  background: #ec4899;
+  background: #164e63;
   top: 40%;
   left: 60%;
   animation-duration: 25s;
@@ -138,9 +138,11 @@ body {
   0% {
     transform: translate(0, 0) scale(1);
   }
+
   50% {
     transform: translate(60px, 80px) scale(1.15);
   }
+
   100% {
     transform: translate(-40px, -60px) scale(0.9);
   }
@@ -151,14 +153,16 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: rgba(9, 13, 22, 0.5);
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-
