@@ -28,14 +28,14 @@ export default function Home() {
             <Zap className="h-3.5 w-3.5 fill-current" />
             <span>Next-Generation Trading Academy</span>
           </div>
-          
+
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-            Master the Markets with{" "}
+            master the markets with{" "}
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              emergingtrader80
+              emergingtrader<span className="text-[0.7em] text-amber-500 ml-0.5">80</span>
             </span>
           </h1>
-          
+
           <p className="max-w-xl text-base text-gray-300 md:text-lg">
             Empower your trading using professional analytics, interactive charts, and premium video courses. Access private YouTube strategies and live analysis.
           </p>
@@ -83,7 +83,7 @@ export default function Home() {
         <div className="flex-1 w-full max-w-xl lg:max-w-none relative group">
           {/* Card Ambient Glow */}
           <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-500 opacity-20 blur-lg transition duration-1000 group-hover:opacity-30"></div>
-          
+
           <div className="relative overflow-hidden glass-card border border-white/10">
             {/* Window controls header */}
             <div className="flex items-center justify-between border-b border-white/5 bg-slate-950/40 px-4 py-3">
@@ -95,7 +95,7 @@ export default function Home() {
               <div className="text-[10px] text-gray-500">emergingtrader80_terminal.exe</div>
               <div className="w-12"></div>
             </div>
-            
+
             {/* Main Terminal Visual */}
             <div className="relative aspect-video w-full">
               <Image
@@ -106,7 +106,7 @@ export default function Home() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-transparent to-transparent"></div>
-              
+
               {/* Overlay Glass Badge */}
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/10 bg-slate-950/80 p-3.5 backdrop-blur-md flex items-center justify-between">
                 <div>
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="space-y-8">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-            Why Choose emergingtrader80?
+            Why Choose emergingtrader<span className="text-[0.8em] text-amber-500 ml-0.5">80</span>?
           </h2>
           <p className="mx-auto max-w-lg text-sm text-gray-400">
             Experience institutional-grade analytics packaged in a beautiful, responsive, glassmorphic layout.
@@ -227,7 +227,7 @@ export default function Home() {
             <div className="absolute -top-3.5 right-6 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 px-3.5 py-1 text-[10px] font-bold text-white uppercase tracking-wider">
               Popular
             </div>
-            
+
             <div>
               <h4 className="text-sm font-bold uppercase tracking-wider text-blue-400 mb-1">Premium</h4>
               <div className="flex items-baseline gap-1 text-white mb-4">
@@ -256,7 +256,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            
+
             {user ? (
               user.hasSubscription ? (
                 <Link

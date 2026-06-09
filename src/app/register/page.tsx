@@ -64,7 +64,7 @@ function RegisterContent() {
         <p className="mt-2 text-sm text-gray-400">
           {plan === "premium"
             ? "Create an account to complete your subscription"
-            : "Join emergingtrader80 Academy today"}
+            : <>Join emergingtrader<span className="text-[0.8em] text-amber-500 ml-0.5">80</span> Academy today</>}
         </p>
       </div>
 
