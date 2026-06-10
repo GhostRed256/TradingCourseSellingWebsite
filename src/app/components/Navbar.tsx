@@ -54,16 +54,102 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b border-white/5 bg-[#090d16]/50 px-6 backdrop-blur-md">
-        {/* Left Side: Market Tickers (TradingView visual) */}
-        <div className="hidden items-center gap-6 overflow-x-auto py-1 md:flex">
+      <header className="sticky top-0 z-30 w-full border-b border-white/5 bg-[#090d16]/50 backdrop-blur-md">
+        <div className="flex h-16 w-full items-center justify-between px-6">
+          {/* Left Side: Market Tickers (TradingView visual) - Desktop */}
+          <div className="hidden items-center gap-6 overflow-x-auto py-1 md:flex">
+            {tickers.map((ticker) => (
+              <div key={ticker.symbol} className="flex items-center gap-2 text-xs">
+                <span className="font-semibold text-gray-300">{ticker.symbol}</span>
+                <span className="font-mono text-white">{ticker.price}</span>
+                <span
+                  className={`flex items-center font-mono font-medium ${ticker.isUp ? "text-emerald-400" : "text-rose-400"
+                    }`}
+                >
+                  {ticker.isUp ? (
+                    <ArrowUpRight className="h-3 w-3" />
+                  ) : (
+                    <ArrowDownRight className="h-3 w-3" />
+                  )}
+                  {ticker.change}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="flex items-center md:hidden">
+            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+              emergingtrader<span className="text-[0.8em] text-amber-400 ml-0.5">80</span>
+            </span>
+          </div>
+
+          {/* Right Side: Alerts & Subscription Actions */}
+          <div className="flex items-center gap-4">
+            {user ? (
+              <>
+                {/* Notification icon */}
+                <button className="relative flex h-9 w-9 items-center justify-center rounded-lg border border-white/5 bg-white/3 text-gray-300 hover:bg-white/8 transition-colors duration-200">
+                  <Bell className="h-4.5 w-4.5" />
+                  <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
+                </button>
+
+                {/* Subscription Status Action */}
+                {user.hasSubscription ? (
+                  <div className="flex items-center gap-2">
+                    <div className="hidden items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.1)] md:flex">
+                      <Sparkles className="h-3.5 w-3.5" />
+                      <span>Premium Member</span>
+                    </div>
+                    <button
+                      onClick={cancelSubscription}
+                      className="text-xs text-gray-500 hover:text-rose-400 transition-colors"
+                    >
+                      Cancel Sub
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    onClick={handleSubscribe}
+                    className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-1.5 text-xs font-semibold text-gray-950 shadow-[0_4px_15px_rgba(245,158,11,0.3)] transition-all hover:scale-105 hover:shadow-[0_4px_25px_rgba(245,158,11,0.5)] cursor-pointer"
+                  >
+                    <Zap className="h-3.5 w-3.5 fill-current" />
+                    <span>Go Premium</span>
+                  </button>
+                )}
+
+                {/* User Identity info */}
+                <div className="flex items-center gap-2.5 pl-2 border-l border-white/10">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-blue-400">
+                    {user.username.charAt(0).toUpperCase()}
+                  </div>
+                  <div className="hidden flex-col text-left md:flex">
+                    <span className="text-xs font-semibold text-white">{user.username}</span>
+                    <div className="text-[10px] font-mono text-gray-500">
+                      emergingtrader80_terminal.exe
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <Link
+                href="/login"
+                className="flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-white/10"
+              >
+                <span>Sign In</span>
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {/* Market Tickers - Mobile (Shows below the main header row) */}
+        <div className="flex items-center gap-6 overflow-x-auto py-2 px-6 border-t border-white/5 md:hidden no-scrollbar">
           {tickers.map((ticker) => (
-            <div key={ticker.symbol} className="flex items-center gap-2 text-xs">
+            <div key={`${ticker.symbol}-mobile`} className="flex items-center gap-2 text-xs shrink-0">
               <span className="font-semibold text-gray-300">{ticker.symbol}</span>
               <span className="font-mono text-white">{ticker.price}</span>
               <span
-                className={`flex items-center font-mono font-medium ${ticker.isUp ? "text-emerald-400" : "text-rose-400"
-                  }`}
+                className={`flex items-center font-mono font-medium ${
+                  ticker.isUp ? "text-emerald-400" : "text-rose-400"
+                }`}
               >
                 {ticker.isUp ? (
                   <ArrowUpRight className="h-3 w-3" />
@@ -74,68 +160,6 @@ export default function Navbar() {
               </span>
             </div>
           ))}
-        </div>
-        <div className="flex items-center md:hidden">
-          <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-            emergingtrader<span className="text-[0.8em] text-amber-400 ml-0.5">80</span>
-          </span>
-        </div>
-
-        {/* Right Side: Alerts & Subscription Actions */}
-        <div className="flex items-center gap-4">
-          {user ? (
-            <>
-              {/* Notification icon */}
-              <button className="relative flex h-9 w-9 items-center justify-center rounded-lg border border-white/5 bg-white/3 text-gray-300 hover:bg-white/8 transition-colors duration-200">
-                <Bell className="h-4.5 w-4.5" />
-                <span className="absolute right-2 top-2 h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.8)]"></span>
-              </button>
-
-              {/* Subscription Status Action */}
-              {user.hasSubscription ? (
-                <div className="flex items-center gap-2">
-                  <div className="hidden items-center gap-1.5 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs text-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.1)] md:flex">
-                    <Sparkles className="h-3.5 w-3.5" />
-                    <span>Premium Member</span>
-                  </div>
-                  <button
-                    onClick={cancelSubscription}
-                    className="text-xs text-gray-500 hover:text-rose-400 transition-colors"
-                  >
-                    Cancel Sub
-                  </button>
-                </div>
-              ) : (
-                <button
-                  onClick={handleSubscribe}
-                  className="flex items-center gap-1.5 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-1.5 text-xs font-semibold text-gray-950 shadow-[0_4px_15px_rgba(245,158,11,0.3)] transition-all hover:scale-105 hover:shadow-[0_4px_25px_rgba(245,158,11,0.5)] cursor-pointer"
-                >
-                  <Zap className="h-3.5 w-3.5 fill-current" />
-                  <span>Go Premium</span>
-                </button>
-              )}
-
-              {/* User Identity info */}
-              <div className="flex items-center gap-2.5 pl-2 border-l border-white/10">
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 border border-white/10 text-sm font-semibold text-blue-400">
-                  {user.username.charAt(0).toUpperCase()}
-                </div>
-                <div className="hidden flex-col text-left md:flex">
-                  <span className="text-xs font-semibold text-white">{user.username}</span>
-                  <div className="text-[10px] font-mono text-gray-500">
-                    emergingtrader80_terminal.exe
-                  </div>
-                </div>
-              </div>
-            </>
-          ) : (
-            <Link
-              href="/login"
-              className="flex items-center gap-1.5 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-white transition-all hover:bg-white/10"
-            >
-              <span>Sign In</span>
-            </Link>
-          )}
         </div>
       </header>
 
