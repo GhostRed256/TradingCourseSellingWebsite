@@ -78,7 +78,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center md:hidden">
             <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-              emergingtrader<span className="text-[0.8em] text-amber-400 ml-0.5">80</span>
+              emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span>
             </span>
           </div>
 
@@ -171,10 +171,10 @@ export default function Navbar() {
             <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl"></div>
 
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-              Why Choose emergingtrader<span className="text-[0.8em] text-amber-400 ml-0.5">80</span>?
+              Why Choose <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span>?
             </h2>
             <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-              <Sparkles className="text-amber-400 h-6 w-6" /> Unlock emergingtrader<span className="text-[0.8em] text-amber-400 ml-0.5">80</span> Premium
+              <Sparkles className="text-amber-400 h-6 w-6" /> Unlock <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span> Premium
             </h3>
             <p className="text-sm text-gray-300 mb-6">
               Get instant access to real-time premium alerts, advanced dashboard features, and our exclusive library of unlisted YouTube trading video courses.

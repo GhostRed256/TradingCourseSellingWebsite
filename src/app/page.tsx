@@ -32,7 +32,7 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             master the markets with{" "}
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              emergingtrader<span className="text-[0.7em] text-amber-500 ml-0.5">80</span>
+              emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span>
             </span>
           </h1>
 
@@ -129,7 +129,7 @@ export default function Home() {
       <section className="space-y-8">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-            Why Choose emergingtrader<span className="text-[0.8em] text-amber-500 ml-0.5">80</span>?
+            Why Choose <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span>?
           </h2>
           <p className="mx-auto max-w-lg text-sm text-gray-400">
             Experience institutional-grade analytics packaged in a beautiful, responsive, glassmorphic layout.
