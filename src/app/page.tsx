@@ -31,8 +31,11 @@ export default function Home() {
 
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             master the markets with{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span>
+            <span className="inline-flex items-center gap-3">
+              <Image src="/logo.jpg" alt="Xaubugg Logo" width={64} height={64} className="rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                Xaubugg.com
+              </span>
             </span>
           </h1>
 
@@ -92,7 +95,7 @@ export default function Home() {
                 <span className="h-3 w-3 rounded-full bg-amber-500/80"></span>
                 <span className="h-3 w-3 rounded-full bg-emerald-500/80"></span>
               </div>
-              <div className="text-[10px] text-gray-500">emergingtrader80_terminal.exe</div>
+              <div className="text-[10px] text-gray-500">xaubugg_terminal.exe</div>
               <div className="w-12"></div>
             </div>
 
@@ -128,8 +131,8 @@ export default function Home() {
       {/* Feature Tiles (Apple Glass Style) */}
       <section className="space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-            Why Choose <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span>?
+          <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl flex items-center gap-3 justify-center">
+            Why Choose <Image src="/logo.jpg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
           </h2>
           <p className="mx-auto max-w-lg text-sm text-gray-400">
             Experience institutional-grade analytics packaged in a beautiful, responsive, glassmorphic layout.

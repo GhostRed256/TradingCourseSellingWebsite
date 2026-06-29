@@ -25,7 +25,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     // Load user from localStorage on mount
-    const storedUser = localStorage.getItem("emergingtrader80_user");
+    const storedUser = localStorage.getItem("xaubugg_user");
     if (storedUser) {
       try {
         setUser(JSON.parse(storedUser));
@@ -43,12 +43,12 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
       hasSubscription: false, // Default to unsubscribed
     };
     setUser(newUser);
-    localStorage.setItem("emergingtrader80_user", JSON.stringify(newUser));
+    localStorage.setItem("xaubugg_user", JSON.stringify(newUser));
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("emergingtrader80_user");
+    localStorage.removeItem("xaubugg_user");
   };
 
   const subscribe = async () => {
@@ -59,7 +59,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
     if (user) {
       const updatedUser = { ...user, hasSubscription: true };
       setUser(updatedUser);
-      localStorage.setItem("emergingtrader80_user", JSON.stringify(updatedUser));
+      localStorage.setItem("xaubugg_user", JSON.stringify(updatedUser));
     }
     setLoading(false);
   };
@@ -68,7 +68,7 @@ export function SubscriptionProvider({ children }: { children: React.ReactNode }
     if (user) {
       const updatedUser = { ...user, hasSubscription: false };
       setUser(updatedUser);
-      localStorage.setItem("emergingtrader80_user", JSON.stringify(updatedUser));
+      localStorage.setItem("xaubugg_user", JSON.stringify(updatedUser));
     }
   };
 

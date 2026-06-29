@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useSubscription } from "../context/SubscriptionContext";
 import { Zap, Bell, Shield, ArrowUpRight, ArrowDownRight, Sparkles } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const { user, subscribe, cancelSubscription, loading } = useSubscription();
@@ -77,9 +78,12 @@ export default function Navbar() {
             ))}
           </div>
           <div className="flex items-center md:hidden">
-            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
-              emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span>
-            </span>
+            <Link href="/" className="flex items-center gap-2">
+              <Image src="/logo.jpg" alt="Xaubugg Logo" width={32} height={32} className="rounded-full shadow-md" />
+              <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
+                Xaubugg.com
+              </span>
+            </Link>
           </div>
 
           {/* Right Side: Alerts & Subscription Actions */}
@@ -124,7 +128,7 @@ export default function Navbar() {
                   <div className="hidden flex-col text-left md:flex">
                     <span className="text-xs font-semibold text-white">{user.username}</span>
                     <div className="text-[10px] font-mono text-gray-500">
-                      emergingtrader80_terminal.exe
+                      xaubugg_terminal.exe
                     </div>
                   </div>
                 </div>
@@ -170,11 +174,11 @@ export default function Navbar() {
             {/* Ambient background glow inside modal */}
             <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl"></div>
 
-            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
-              Why Choose <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span>?
+            <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl flex items-center gap-3 justify-center">
+              Why Choose <Image src="/logo.jpg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
             </h2>
-            <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
-              <Sparkles className="text-amber-400 h-6 w-6" /> Unlock <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">emergingtrader<span className="text-[0.35em] font-light text-pink-500 ml-0.5">80</span></span> Premium
+            <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2 justify-center mt-2">
+              <Sparkles className="text-amber-400 h-6 w-6" /> Unlock <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span> Premium
             </h3>
             <p className="text-sm text-gray-300 mb-6">
               Get instant access to real-time premium alerts, advanced dashboard features, and our exclusive library of unlisted YouTube trading video courses.
