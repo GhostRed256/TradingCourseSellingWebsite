@@ -79,7 +79,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center md:hidden">
             <Link href="/" className="flex items-center gap-2">
-              <Image src="/logo.jpg" alt="Xaubugg Logo" width={32} height={32} className="rounded-full shadow-md" />
+              <Image src="/logo.jpeg" alt="Xaubugg Logo" width={32} height={32} className="rounded-full shadow-md" />
               <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-cyan-300 via-cyan-400 to-teal-400 bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">
                 Xaubugg.com
               </span>
@@ -175,7 +175,7 @@ export default function Navbar() {
             <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/20 blur-3xl"></div>
 
             <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl flex items-center gap-3 justify-center">
-              Why Choose <Image src="/logo.jpg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
+              Why Choose <Image src="/logo.jpeg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
             </h2>
             <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2 justify-center mt-2">
               <Sparkles className="text-amber-400 h-6 w-6" /> Unlock <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span> Premium

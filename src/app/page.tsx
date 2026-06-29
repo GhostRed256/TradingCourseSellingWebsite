@@ -32,7 +32,7 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             master the markets with{" "}
             <span className="inline-flex items-center gap-3">
-              <Image src="/logo.jpg" alt="Xaubugg Logo" width={64} height={64} className="rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
+              <Image src="/logo.jpeg" alt="Xaubugg Logo" width={64} height={64} className="rounded-full shadow-[0_0_15px_rgba(56,189,248,0.5)]" />
               <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
                 Xaubugg.com
               </span>
@@ -132,7 +132,7 @@ export default function Home() {
       <section className="space-y-8">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl flex items-center gap-3 justify-center">
-            Why Choose <Image src="/logo.jpg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
+            Why Choose <Image src="/logo.jpeg" alt="Xaubugg Logo" width={40} height={40} className="rounded-full" /> <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Xaubugg.com</span>?
           </h2>
           <p className="mx-auto max-w-lg text-sm text-gray-400">
             Experience institutional-grade analytics packaged in a beautiful, responsive, glassmorphic layout.
