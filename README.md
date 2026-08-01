@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Xaubugg.com | Premium Trading Portal
 
-## Getting Started
+Creative Developer & Artist
 
-First, run the development server:
+## 👋 Welcome
+Welcome to my digital garden. This project is a blend of my passions: creative coding, interactive web experiences, and trading. Xaubugg.com is a premium trading education and analysis portal designed with a stunning glassmorphic interface to empower traders with professional analytics.
+
+## ✨ Key Features
+This isn't just a static site. I've engineered it to feel alive and provide an institutional-grade experience:
+- **Glassmorphic UI**: A beautiful, responsive, Apple Glass style layout with ambient glows and sleek interactions that adapt to your device.
+- **Interactive TradingView Charts**: Full-fledged TradingView widgets and real-time live tickers directly inside the dashboard.
+- **Premium Subscription Portal**: Tiered access allowing users to unlock private, unlisted YouTube strategies and live analysis.
+- **Immersive Effects**: Dynamic hover states, glowing interactive buttons, and smooth layout transitions.
+- **Cyberpunk Terminal**: A mock terminal interface that feels alive and highly interactive.
+
+## 🛠️ Built With
+The core technology stack chosen for performance and developer experience:
+
+### Core
+- [React 19](https://react.dev/): For building a component-based, interactive UI.
+- [Next.js 16](https://nextjs.org/): Utilizing the App Router for server-side rendering and optimal performance.
+- [TypeScript](https://www.typescriptlang.org/): For type-safe, maintainable code.
+
+### Styling & Animation
+- [Tailwind CSS](https://tailwindcss.com/): For rapid, utility-first styling and a completely custom design system without UI libraries.
+- [Framer Motion](https://www.framer.com/motion/): Powering the smooth, complex animations and page transitions.
+- [Lucide React](https://lucide.dev/): For crisp, consistent, and beautiful iconography.
+
+## 🚀 Getting Started
+If you'd like to run this locally:
 
 ```bash
+# Clone the repo
+git clone https://github.com/GhostRed256/TradingCourseSellingWebsite.git
+
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to check it out.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📄 License
+Open source under the [MIT License](https://github.com/GhostRed256/TradingCourseSellingWebsite/blob/main/LICENSE).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by Ritesh Dey
