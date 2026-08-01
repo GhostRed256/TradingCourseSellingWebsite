@@ -51,6 +51,21 @@ export default function RootLayout({
             <main className="flex-1 p-6 pb-24 md:pb-6 overflow-y-auto">
               {children}
             </main>
+
+            {/* Footer */}
+            <footer className="w-full py-6 text-center border-t border-white/5 bg-[#090d16]/50 backdrop-blur-md mt-auto">
+              <p className="text-sm text-gray-400">
+                made with ❤️ by{" "}
+                <a
+                  href="https://bio-portfolio-seven.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-blue-400 hover:text-blue-300 transition-colors hover:underline"
+                >
+                  Ritesh Dey
+                </a>
+              </p>
+            </footer>
           </div>
         </SubscriptionProvider>
       </body>
